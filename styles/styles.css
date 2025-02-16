@@ -143,57 +143,88 @@ body {
   font-size: 1.4rem;
 }
 
-
 /* ======== RWD: Navigation (Mobile) ======== */
 @media (max-width: 1150px) {
-    .nav-menu {
-        position: fixed;
-        text-align: center;
-        top: 0;
-        left: 0;
-        padding: 2rem 0 4rem 0;
-        background-color: rgba(0, 0, 0, 0.75);
-        width: 100%;
-        transition: top 0.5;
-        backdrop-filter: blur(5px);
-    }
+  .nav-menu {
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    padding: 2rem 0 4rem 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    transition: top 0.5;
+    backdrop-filter: blur(5px);
+  }
 }
 
 .nav-title {
-    margin-bottom: 3rem;
-    font-size: var(--font-size-smaller);
-    font-weight: var(--font-semi-bold);;
-    display: block;
+  margin-bottom: 3rem;
+  font-size: var(--font-size-smaller);
+  font-weight: var(--font-semi-bold);
+  display: block;
 }
 
 .nav-title,
 .nav-close,
 .nav-name {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 .nav-name {
-    margin: 0 auto 2rem auto;
-    position: relative;
-    width: max-content;
-    font-size: var(--font-size-h2);
+  margin: 0 auto 2rem auto;
+  position: relative;
+  width: max-content;
+  font-size: var(--font-size-h1);
 
-    &::before,
-    &::after {
-        content: "";
-        width: 45px;
-        height: 1px;
-        position: absolute;
-        left: -4rem;
-        top: 50%;
-        background-color: var(--color-dark-white);
+  /* lines beside my name in mobile menu */
+  &::before,
+  &::after {
+    content: "";
+    width: 45px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    background-color: var(--color-dark-white);
+  }
 
-    }
+  &::before {
+    left: -4rem;
+  }
 
-    &::before {
-        right: -4rem;
-        left: initial;
-    }
+  &::after {
+    right: -4rem;
+  }
 }
 
+.nav-list {
+  display: grid;
+  gap: 2rem;
+}
 
+.nav-link {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-semi-bold);
+  color: var(--color-dark-white);
+  position: relative;
+  transition: color 0.3s;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: var(--color-white);
+    bottom: -.3rem;
+    left: 0;
+    width: 0;
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    color: var(--color-white);
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
