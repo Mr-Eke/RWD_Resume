@@ -1,0 +1,44 @@
+/* Google Font: Josefin Sans */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+/* Css Reset Rule */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Variables */
+:root {
+  --header-height: 3.5rem;
+
+  /* ===== Colours ===== */
+  --color-black: hsl(0, 0%, 0%);
+
+  /*===== Font and typography =====*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --font-regular: 400;
+
+  --font-size-big: 2.5rem;
+  --font-size-normal: 0.938rem;
+  --font-size-small: 0.813rem;
+  --font-size-smaller: 0.75rem;
+  --font-size-h1: 1.75rem;
+  --font-size-h2: 1.25rem;
+  --font-size-h3: 1.125rem;
+  --font-body: "Josefin Sans", sans-serif;
+
+}
