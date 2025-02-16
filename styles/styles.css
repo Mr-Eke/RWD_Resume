@@ -26,7 +26,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--color-text);
+  color: var(--color-title);
   font-weight: var(--font-bold);
 }
 
@@ -45,9 +45,9 @@ svg {
   --header-height: 3.5rem;
 
   /* Colours */
-  --color-title: hsl(0, 0%, 0%);
-  --color-black: hsl(0, 0%, 0%);
-  --color-text: hsl(0, 0%, 35%);
+  --color-title: #000000;
+  --color-black: #000000;
+  --color-text: #595959;
 
   /* Font & typography */
   --font-medium: 500;
