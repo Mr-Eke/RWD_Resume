@@ -14,6 +14,22 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-text);
+  font-weight: var(--font-bold);
+}
+
 img,
 picture,
 video,
@@ -21,6 +37,7 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 /* ====== Variables ====== */
@@ -28,6 +45,7 @@ svg {
   --header-height: 3.5rem;
 
   /* Colours */
+  --color-title: hsl(0, 0%, 0%);
   --color-black: hsl(0, 0%, 0%);
   --color-text: hsl(0, 0%, 35%);
 
