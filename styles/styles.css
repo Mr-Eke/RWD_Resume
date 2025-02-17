@@ -46,7 +46,7 @@ svg {
 :root {
   /* Colours */
   --color-bg--body: linear-gradient(135deg, #f6f7ff 0%, #e9eeff 100%);
-  --color-bg-unq: linear-gradient(10deg, #e639004d, #e6390000);
+  --color-bg-unq: linear-gradient(90deg, #e639004d, #e6390000);
   --color-title: #000000;
   --color-black: #000000;
   --color-text: #595959;
@@ -85,12 +85,17 @@ svg {
   }
 }
 
-/* ====== Used across all Section ===== */
+/* ====== Reuseables: across all Section ===== */
 body {
   font-family: var(--font-body);
   font-size: var(--font-size-normal);
   background: var(--color-bg--body);
   color: var(--color-text);
+}
+
+b {
+  color: var(--color-bg-sec);
+  background: var(--color-bg-unq);
 }
 
 .container {
@@ -269,6 +274,7 @@ body {
 .home-name {
   text-align: center;
   font-size: var(--font-size-big);
+  font-family: var(--font-unique);
 }
 
 .home-profile {
@@ -345,12 +351,6 @@ body {
   line-height: 1.3rem;
   color: var(--color-black);
   margin-bottom: 1.5rem;
-
-  /* Styled text: "Software engineering" */
-  & b {
-    color: var(--color-bg-sec);
-    background: var(--color-bg-unq);
-  }
 }
 
 /* ========== Scroll-down icon ======== */
@@ -366,7 +366,7 @@ body {
     height: 30px;
     font-size: 1.2rem;
     color: var(--color-white);
-    background-color:  var(--color-black);
+    background-color: var(--color-black);
     border-radius: 0 10px 0 10px;
     overflow: hidden;
     transition: background-color 0.5s;
@@ -392,9 +392,15 @@ body {
     opacity: 1;
   }
   100% {
-    transform: translateY(.6rem);
+    transform: translateY(0.6rem);
     opacity: 0;
   }
 }
 
-
+/* ============= About Me Section =============== */
+.about-section-title-1 {
+  font-size: var(--font-size-h1);
+  margin: 0 auto 2rem;
+  position: relative;
+  width: max-content;
+}
