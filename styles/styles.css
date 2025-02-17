@@ -98,20 +98,20 @@ b {
   background: var(--color-bg-unq);
 }
 
+/* Gradient bullet line */
 .skills-section-title,
 .about-section-title {
   position: relative;
-}
 
-.skills-section-title::before,
-.about-section-title::before {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 40px;
-  background: linear-gradient(to bottom, #8000ff, #4d6b88, #fff);
-  left: -1rem;
-  top: -0.3rem;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 40px;
+    background: linear-gradient(to bottom, #8000ff, #4d6b88, #fff);
+    left: -1rem;
+    top: -0.3rem;
+  }
 }
 
 .container {
@@ -427,6 +427,8 @@ b {
   row-gap: 0;
 }
 
+/* About Me and My Skills title */
+.skills-section-title,
 .about-section-title {
   font-size: var(--font-size-h1);
   margin: 0 auto 2rem;
@@ -532,9 +534,4 @@ b {
   &:hover {
     border: 2px solid var(--color-white);
   }
-}
-
-.skills-section-title {
-  margin: 0 auto;
-  text-align: center;
 }
