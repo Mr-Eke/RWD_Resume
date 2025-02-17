@@ -266,10 +266,6 @@ body {
 }
 
 /* ============= Home Section ============ */
-.home-section {
-  padding-top: 2rem;
-}
-
 .home-name {
   text-align: center;
   font-size: var(--font-size-big);
