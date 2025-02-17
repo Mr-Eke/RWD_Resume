@@ -98,6 +98,22 @@ b {
   background: var(--color-bg-unq);
 }
 
+.skills-section-title,
+.about-section-title {
+  position: relative;
+}
+
+.skills-section-title::before,
+.about-section-title::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 40px;
+  background: linear-gradient(to bottom, #8000ff, #4d6b88, #fff);
+  left: -1rem;
+  top: -0.3rem;
+}
+
 .container {
   max-width: 1120px;
   margin-inline: 1rem;
@@ -109,7 +125,7 @@ b {
 }
 
 .section {
-  padding: 5rem 0 2rem 0;
+  padding: 2rem 0 2rem 0;
 }
 
 /* ============= Navigation: Header & Nav ============ */
@@ -271,6 +287,11 @@ b {
 }
 
 /* ============= Home Section ============ */
+
+.home {
+  margin-top: 2.5rem;
+}
+
 .home-name {
   text-align: center;
   font-size: var(--font-size-big);
@@ -406,7 +427,7 @@ b {
   row-gap: 0;
 }
 
-.about-section-title-1 {
+.about-section-title {
   font-size: var(--font-size-h1);
   margin: 0 auto 2rem;
   position: relative;
@@ -500,7 +521,7 @@ b {
 
 .button-linkedin {
   background-color: var(--color-white);
-  padding: .6rem;
+  padding: 0.6rem;
   border: 2px solid var(--color-bg-sec);
 
   i {
@@ -511,4 +532,9 @@ b {
   &:hover {
     border: 2px solid var(--color-white);
   }
+}
+
+.skills-section-title {
+  margin: 0 auto;
+  text-align: center;
 }
