@@ -489,14 +489,11 @@ b {
     /* Round circle tick box before each list item */
     &::before {
       position: absolute;
-      content: "";
+      content: "→";
       width: 100%;
       height: 100%;
-      left: -48%;
-      top: -30%;
-      background-color: var(--color-bg-sec);
-      mask: url("../images/check-circle.svg") no-repeat center;
-      -webkit-mask: url("../images/check-circle.svg") no-repeat center;
+      left: -1%;
+      color: var(--color-bg-sec);
     }
   }
 }
