@@ -1,21 +1,28 @@
 // Display Mobile Menu
 const navBarMenu = document.getElementById("nav-menu"),
-navBarClose = document.getElementById("nav-close"),
-navBarToggle = document.getElementById("nav-toggle")
+    navBarClose = document.getElementById("nav-close"),
+    navBarToggle = document.getElementById("nav-toggle")
 
-console.log('object oooo')
-
-// Check if mobile nav icon is active
+// Check if mobile nav icon is active & display menu
 if (navBarToggle) {
     navBarToggle.addEventListener("click", () => {
-        console.log("Toggle clicked")
         navBarMenu.classList.add("display-menu")
     })
 }
 
-// Check if nav close icon is active
+// Check if nav close icon is active & Hide Menu
 if (navBarClose) {
     navBarClose.addEventListener("click", () => {
         navBarMenu.classList.remove("display-menu")
     })
 }
+
+// Hide Mobile Menu
+const navBarLinks = document.querySelectorAll('.navbar-link')
+
+const navLinkAction = () => {
+    const navBarMenu = document.getElementById("nav-menu")
+    // Hide menu when a nav link is clicked
+    navBarMenu.classList.remove("display-menu")
+}
+navBarLinks.forEach(link => link.addEventListener("click", navLinkAction))
