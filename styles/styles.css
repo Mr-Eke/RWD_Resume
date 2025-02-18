@@ -510,7 +510,7 @@ b {
   padding: 1rem;
   font-weight: var(--font-medium);
   color: var(--color-white);
-  background-color: var(--color-bg-sec);
+  background-color: var(--color-black);
   transition: background-color 0.5s;
 
   &:hover {
@@ -521,15 +521,15 @@ b {
 .button-linkedin {
   background-color: var(--color-white);
   padding: 0.6rem;
-  border: 2px solid var(--color-bg-sec);
+  border: 2px solid var(--color-black);
 
   i {
     font-size: 1.5rem;
-    color: var(--color-bg-sec);
+    color: var(--color-black);
   }
 
   &:hover {
-    border: 2px solid var(--color-white);
+    border: 2px solid var(--color-bg-hover);
   }
 }
 
