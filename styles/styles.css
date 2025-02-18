@@ -485,13 +485,14 @@ b {
       color: var(--color-black);
     }
 
-    /* Round circle tick box before each list item */
+    /* Arrow bullet before each list item */
     &::before {
       position: absolute;
       content: "→";
       width: 100%;
       height: 100%;
       left: -1%;
+      font-size: var(--font-semi-bold);
       color: var(--color-bg-sec);
     }
   }
@@ -539,19 +540,18 @@ b {
   width: min(70rem, 95%);
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  counter-reset: cardnr;  /* Counter for card numbering */
+  gap: 1rem;
+  counter-reset: cardnr; /* Counter for card numbering */
   justify-content: center;
 }
 
 /* Individual skill card styling */
 .skills-list {
-  --frontColor: white;
-  --width: 24em;
+  --width: 21em;
   --inlineP: 0.5rem; /* Horizontal padding */
-  --borderR: 4rem;   /* Border radius & top sec height */
-  --arrowW: 10rem;   /* Bottom arrow width */
-  --arrowH: 2rem;    /* Bottom arrow height */
+  --borderR: 4rem; /* Border radius & top sec height */
+  --arrowW: 10rem; /* Bottom arrow width */
+  --arrowH: 2rem; /* Bottom arrow height */
 
   counter-increment: cardnr;
   width: calc(var(--width) - var(--inlineP) * 2);
@@ -563,17 +563,25 @@ b {
   margin-inline: var(--inlineP);
   margin-bottom: calc(var(--borderR));
   position: relative;
-  background-color: var(--color-black);
-  min-height: 40vh;
+  background-color: red;
+  min-height: 33vh;
+  margin-top: 2rem;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+
+  &:nth-child(2) {
+    background-color: var(--color-black);
+  }
 }
+
+/* .skills-list:hover {
+  transform: translateY(-5px);
+} */
 
 /* Common styles for card sections */
 .skills-list .icon,
 .skills-list .title,
 .skills-list .descr {
-  background: var(--frontColor);
-  padding-inline: 1rem;
-  padding-bottom: 1rem;
+  background: var(--color-white);
 }
 
 /* Styles for icon and title sections */
@@ -581,7 +589,6 @@ b {
 .skills-list .title {
   color: var(--accent-color); /* Use accent color from inline styles */
   text-align: center;
-  padding-bottom: 0.5rem;
 }
 
 /* Icon section specific styling */
@@ -604,7 +611,6 @@ b {
 .skills-list .descr {
   grid-area: descr;
   font-size: 0.85rem;
-  max-width: 21rem;
   word-wrap: break-word;
 }
 
@@ -643,7 +649,7 @@ b {
   color: white;
 }
 
-/* Bottom glow effect */
+/* Bottom glow effect*/
 .skills-list::before {
   content: "";
   position: absolute;
@@ -655,4 +661,106 @@ b {
   background-image: linear-gradient(var(--accent-color), transparent 60%);
   opacity: 0.5;
   filter: blur(2px);
+}
+
+/* ForEach list of skill */
+.descr-item p {
+  padding-left: 3rem;
+  position: relative;
+  font-weight: var(--font-bold);
+  color: var(--color-black);
+
+  &::before {
+    position: absolute;
+    content: "→";
+    width: 100%;
+    height: 100%;
+    left: 15%;
+    font-size: var(--font-semi-bold);
+    color: var(--color-bg-sec);
+  }
+}
+
+.descr-item-2 p::before {
+  color: #D63384;
+}
+
+.descr-item-3 p::before {
+  color: #8000ff;
+}
+
+/* Skills and Profiency level bar */
+.descr-container {
+  width: 240px;
+  margin-top: 2.5rem;
+}
+
+.descr-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.progress-bar {
+  width: 55%;
+  height: 18px;
+  background-color: var(--color-black);
+  border-radius: 13px;
+  padding: 3.5px;
+  margin-right: -3rem;
+}
+
+.progress {
+  width: 85%;
+  height: 100%;
+  background-color: orange;
+  border-radius: 9px;
+}
+
+/* Specific level for each skill */
+.progress-html {
+  width: 90%;
+}
+.progress-tw {
+  width: 80%;
+}
+.progress-rjs {
+  width: 75%;
+}
+.progress-js {
+  width: 75%;
+}
+.progress-py {
+  width: 75%;
+}
+.progress-py {
+  width: 75%;
+}
+.progress-py {
+  width: 75%;
+}
+.progress-py {
+  width: 75%;
+}
+.progress-sh {
+  width: 70%;
+}
+.progress-unix {
+  width: 80%;
+}
+.progress-c {
+  width: 50%;
+}
+.progress-njs {
+  width: 35%;
+}
+.progress-dj {
+  width: 30%;
+}
+.progress-sql {
+  width: 55%;
+}
+.progress-sqlach {
+  width: 50%;
 }
