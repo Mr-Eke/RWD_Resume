@@ -90,7 +90,7 @@ svg {
 body {
   font-family: var(--font-body);
   font-size: var(--font-size-normal);
-  background: var(--color-bg--body);
+  /* background: var(--color-bg--body); */
   color: var(--color-text);
   line-height: 1.5rem;
 }
@@ -102,6 +102,7 @@ b {
 
 /* Gradient bullet line */
 .skills-section-title,
+.projects-section-title,
 .about-section-title {
   position: relative;
 
@@ -292,6 +293,9 @@ b {
 
 .home {
   margin-top: 2.5rem;
+  background-color: var(--color-bg--body);
+  transition: background-color 0.5s;
+
 }
 
 .home-name {
@@ -422,6 +426,7 @@ b {
 /* ============= About Me Section =============== */
 .about {
   transition: background-color 0.5s;
+  background-color: var(--color-bg--body);
 }
 
 .about-section {
@@ -430,6 +435,7 @@ b {
 
 /* About Me and My Skills title */
 .skills-section-title,
+.projects-section-title,
 .about-section-title {
   font-size: var(--font-size-h1);
   margin: 0 auto 2rem;
@@ -534,6 +540,10 @@ b {
 }
 
 /* ==================== Skils Section ================== */
+.services {
+  background-color: var(--color-bg--body);
+  transition: background-color 0.5s;
+}
 
 /* Container for all skill cards */
 .skills-ordered-list {
@@ -719,48 +729,40 @@ b {
 }
 
 /* Specific level for each skill */
-.progress-html {
-  width: 90%;
+.progress-html { width: 90%; }
+.progress-tw { width: 80%; }
+.progress-rjs { width: 75%; }
+.progress-js { width: 75%; }
+.progress-py { width: 75%; }
+.progress-py { width: 75%; }
+.progress-py { width: 75%; }
+.progress-py { width: 75%; }
+.progress-sh { width: 70%; }
+.progress-unix { width: 80%; }
+.progress-c { width: 50%; }
+.progress-njs { width: 35%; }
+.progress-dj { width: 30%; }
+.progress-sql { width: 55%; }
+.progress-sqlach { width: 50%; }
+
+/* ============= Projects Section =============== */
+.projects {
+  background-color: var(--color-bg--body);
+  transition: background-color 0.5s;
 }
-.progress-tw {
-  width: 80%;
+
+.projects-container {
+  /* row-gap: 2rem; */
 }
-.progress-rjs {
-  width: 75%;
+
+.project-cards {
+  padding: 1rem;
+  transition: baackground-color 0.5s;
+  background: var(--color-bg-unq);
 }
-.progress-js {
-  width: 75%;
-}
-.progress-py {
-  width: 75%;
-}
-.progress-py {
-  width: 75%;
-}
-.progress-py {
-  width: 75%;
-}
-.progress-py {
-  width: 75%;
-}
-.progress-sh {
-  width: 70%;
-}
-.progress-unix {
-  width: 80%;
-}
-.progress-c {
-  width: 50%;
-}
-.progress-njs {
-  width: 35%;
-}
-.progress-dj {
-  width: 30%;
-}
-.progress-sql {
-  width: 55%;
-}
-.progress-sqlach {
-  width: 50%;
+
+.project-des {
+  margin-top: .5rem;
+  color: var(--color-bg-sec);
+  /* font-weight: 700; */
 }
