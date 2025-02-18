@@ -29,7 +29,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--color-title);
+  color: var(--color-black);
   font-weight: var(--font-bold);
 }
 
@@ -48,12 +48,10 @@ svg {
   /* Colours */
   --color-bg--body: linear-gradient(135deg, #f6f7ff 0%, #e9eeff 100%);
   --color-bg-unq: linear-gradient(90deg, #e639004d, #e6390000);
-  --color-title: #000000;
   --color-black: #000000;
-  --color-text: #595959;
   --color-white: #ffffff;
   --color-bg-sec: #8000ff;
-  --color-dark-white: #a3a3a3;
+  --color-dark-white: hsl(0, 0%, 30%);
   --color-bg-hover: #9a33ff;
 
   /* Font & typography */
@@ -153,7 +151,7 @@ b {
   display: flex;
   align-items: center;
   font-weight: var(--font-semi-bold);
-  color: var(--color-title);
+  color: var(--color-black);
   column-gap: 0.6rem;
   font-family: var(--font-unique);
 }
@@ -669,6 +667,10 @@ b {
   filter: blur(2px);
 }
 
+.skills-list:hover::before {
+  opacity: 0;
+}
+
 /* ForEach list of skill */
 .descr-item p {
   padding-left: 3rem;
@@ -750,13 +752,77 @@ b {
   padding: 1rem;
   transition: baackground-color 0.5s;
   background: var(--color-bg-unq);
+
+  &:hover {
+    background: none;
+  }
+}
+
+.projects-image {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.project-button {
+  position: absolute;
+  right: 1rem;
+  bottom: -1.5rem;
+  padding: .5rem 1rem;
 }
 .project-img {
-  width: 100%;
   border-radius: 0 10px 0 10px;
 }
 
 .project-description {
   margin-top: .5rem;
   font-size: var(--font-size-normal);
+}
+
+.projects-subtitle {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-size-normal);
+  display: inline-block;
+  position: relative;
+  padding-left: 1.7rem;
+  color: var(--color-dark-white);
+  margin: .3rem 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 1px;
+    background-color: var(--color-dark-white);
+    left: 0;
+    top: 45%;
+    transform: translateY(-50%);
+  }
+}
+
+.project-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: .5rem;
+  gap: 1rem;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  column-gap: .3rem;
+  color: var(--color-dark-white);
+  font-weight: var(--font-medium);
+  font-size: var(--font-size-small);
+  transition: color .3s;
+
+  i {
+    font-size: 1rem;
+    color: var(--color-black);
+    transition: color .3s;
+  }
+}
+
+.project-link:hover,
+.project-link:hover i {
+  color: var(--color-bg-sec);
 }
