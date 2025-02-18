@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
 html {
@@ -91,6 +92,7 @@ body {
   font-size: var(--font-size-normal);
   background: var(--color-bg--body);
   color: var(--color-text);
+  line-height: 1.5rem;
 }
 
 b {
@@ -369,7 +371,6 @@ b {
 /* Profile Description Paragraph */
 .home-description {
   text-align: center;
-  line-height: 1.3rem;
   color: var(--color-black);
   margin-bottom: 1.5rem;
 }
@@ -456,7 +457,6 @@ b {
 }
 
 .about-description {
-  line-height: 1.5rem;
   margin-bottom: 1.5rem;
   color: var(--color-black);
   position: relative;
@@ -480,7 +480,6 @@ b {
     padding-left: 1.2rem;
     color: var(--color-black);
     margin-bottom: 0.5rem;
-    line-height: 1.5rem;
 
     b {
       color: var(--color-black);
@@ -531,4 +530,129 @@ b {
   &:hover {
     border: 2px solid var(--color-white);
   }
+}
+
+/* ==================== Skils Section ================== */
+
+/* Container for all skill cards */
+.skills-ordered-list {
+  width: min(70rem, 95%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  counter-reset: cardnr;  /* Counter for card numbering */
+  justify-content: center;
+}
+
+/* Individual skill card styling */
+.skills-list {
+  --frontColor: white;
+  --width: 24em;
+  --inlineP: 0.5rem; /* Horizontal padding */
+  --borderR: 4rem;   /* Border radius & top sec height */
+  --arrowW: 10rem;   /* Bottom arrow width */
+  --arrowH: 2rem;    /* Bottom arrow height */
+
+  counter-increment: cardnr;
+  width: calc(var(--width) - var(--inlineP) * 2);
+  display: grid;
+  grid-template:
+    "icon" var(--borderR) /* Icon section height */
+    "title"
+    "descr" 3fr;
+  margin-inline: var(--inlineP);
+  margin-bottom: calc(var(--borderR));
+  position: relative;
+  background-color: var(--color-black);
+  min-height: 40vh;
+}
+
+/* Common styles for card sections */
+.skills-list .icon,
+.skills-list .title,
+.skills-list .descr {
+  background: var(--frontColor);
+  padding-inline: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Styles for icon and title sections */
+.skills-list .icon,
+.skills-list .title {
+  color: var(--accent-color); /* Use accent color from inline styles */
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+/* Icon section specific styling */
+.skills-list .icon {
+  grid-area: icon;
+  font-size: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--borderR) 0 0 0; /* Round top-left corner */
+  position: relative;
+}
+
+/* Title section specific styling */
+.skills-list .title {
+  grid-area: title;
+  font-weight: bold;
+}
+
+/* Description section specific styling */
+.skills-list .descr {
+  grid-area: descr;
+  font-size: 0.85rem;
+  max-width: 21rem;
+  word-wrap: break-word;
+}
+
+/* Bottom arrow styling */
+.skills-list .descr::before {
+  content: "";
+  width: var(--arrowW);
+  height: var(--arrowH);
+  position: absolute;
+  top: 100%;
+  background-color: #fff;
+  clip-path: polygon(0 0, 100% 0, 50% 100%); /* Creates a triangle shape */
+}
+
+/* Card number styling */
+.skills-list::after {
+  content: counter(cardnr, decimal-leading-zero);
+  position: absolute;
+  z-index: -1;
+  left: calc(var(--inlineP) * -1);
+  right: calc(var(--inlineP) * -1);
+  top: var(--borderR);
+  bottom: calc(var(--borderR) * -1);
+  display: flex;
+  align-items: flex-end;
+  background: var(--accent-color);
+  background-image: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.25),
+    transparent 25% 75%,
+    rgba(0, 0, 0, 0.25)
+  );
+  border-radius: 0 0 var(--borderR) 0; /* Round bottom-right corner */
+  padding: 1rem;
+  font-size: calc(var(--borderR) - 1rem * 2);
+  color: white;
+}
+
+/* Bottom glow effect */
+.skills-list::before {
+  content: "";
+  position: absolute;
+  height: var(--borderR);
+  top: calc(100% + var(--borderR) - 2px);
+  left: calc(var(--inlineP) * -1);
+  right: calc(var(--inlineP) * -1);
+  border-radius: 0 var(--borderR) 0 0; /* Round top-right corner */
+  background-image: linear-gradient(var(--accent-color), transparent 60%);
+  opacity: 0.5;
+  filter: blur(2px);
 }
