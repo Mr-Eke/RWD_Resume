@@ -99,6 +99,7 @@ b {
 
 /* Gradient bullet line */
 .skills-section-title,
+.contact-section-title,
 .projects-section-title,
 .about-section-title {
   position: relative;
@@ -112,6 +113,16 @@ b {
     left: -1rem;
     top: -0.3rem;
   }
+}
+
+.contact-section-title,
+.skills-section-title,
+.projects-section-title,
+.about-section-title {
+  font-size: var(--font-size-h1);
+  margin: 0 auto 2rem;
+  position: relative;
+  width: max-content;
 }
 
 .container {
@@ -136,7 +147,7 @@ b {
   width: 100%;
   transition: box-shadow 0.5s ease;
   position: fixed;
-  background-color: var(--color-bg--body);
+  background: var(--color-bg--body);
 }
 
 .navbar {
@@ -287,10 +298,9 @@ b {
 }
 
 /* ============= Home Section ============ */
-
 .home {
   margin-top: 2.5rem;
-  background-color: var(--color-bg--body);
+  background: var(--color-bg--body);
   transition: background-color 0.5s;
 
 }
@@ -422,21 +432,11 @@ b {
 /* ============= About Me Section =============== */
 .about {
   transition: background-color 0.5s;
-  background-color: var(--color-bg--body);
+  background: var(--color-bg--body);
 }
 
 .about-section {
   row-gap: 0;
-}
-
-/* About Me and My Skills title */
-.skills-section-title,
-.projects-section-title,
-.about-section-title {
-  font-size: var(--font-size-h1);
-  margin: 0 auto 2rem;
-  position: relative;
-  width: max-content;
 }
 
 .about-profile {
@@ -535,7 +535,7 @@ b {
 
 /* ==================== Skils Section ================== */
 .services {
-  background-color: var(--color-bg--body);
+  background: var(--color-bg--body);
   transition: background-color 0.5s;
 }
 
@@ -567,25 +567,17 @@ b {
   margin-inline: var(--inlineP);
   margin-bottom: calc(var(--borderR));
   position: relative;
-  background-color: red;
-  min-height: 33vh;
+  background-color: var(--color-black);
+  min-height: 35vh;
   margin-top: 2rem;
-  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
-
-  &:nth-child(2) {
-    background-color: var(--color-black);
-  }
 }
-
-/* .skills-list:hover {
-  transform: translateY(-5px);
-} */
 
 /* Common styles for card sections */
 .skills-list .icon,
 .skills-list .title,
 .skills-list .descr {
   background: var(--color-white);
+  z-index: 2;
 }
 
 /* Styles for icon and title sections */
@@ -625,7 +617,7 @@ b {
   height: var(--arrowH);
   position: absolute;
   top: 100%;
-  background-color: #fff;
+  background-color: var(--color-black);
   clip-path: polygon(0 0, 100% 0, 50% 100%); /* Creates a triangle shape */
 }
 
@@ -633,38 +625,21 @@ b {
 .skills-list::after {
   content: counter(cardnr, decimal-leading-zero);
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   left: calc(var(--inlineP) * -1);
   right: calc(var(--inlineP) * -1);
   top: var(--borderR);
   bottom: calc(var(--borderR) * -1);
   display: flex;
   align-items: flex-end;
-  background: var(--accent-color);
-  background-image: linear-gradient(
-    160deg,
-    rgba(255, 255, 255, 0.25),
-    transparent 25% 75%,
-    rgba(0, 0, 0, 0.25)
-  );
+  border: 1px solid var(--color-black);
   border-radius: 0 0 var(--borderR) 0; /* Round bottom-right corner */
   padding: 1rem;
-  font-size: calc(var(--borderR) - 1rem * 2);
-  color: white;
+  font-size: calc(var(--borderR) - 1.3rem * 2);
+  color: var(--color-bg-sec);
 }
-
-/* Bottom glow effect*/
-.skills-list::before {
-  content: "";
-  position: absolute;
-  height: var(--borderR);
-  top: calc(100% + var(--borderR) - 2px);
-  left: calc(var(--inlineP) * -1);
-  right: calc(var(--inlineP) * -1);
-  border-radius: 0 var(--borderR) 0 0; /* Round top-right corner */
-  background-image: linear-gradient(var(--accent-color), transparent 60%);
-  opacity: 0.5;
-  filter: blur(2px);
+.skills-list:nth-child(2)::after {
+  color: #D63384;
 }
 
 .skills-list:hover::before {
@@ -688,10 +663,10 @@ b {
   }
 }
 
+/* List Bullet (arrows) */
 .descr-item-2 p::before {
   color: #D63384;
 }
-
 .descr-item-3 p::before {
   color: #8000ff;
 }
@@ -744,7 +719,7 @@ b {
 
 /* ============= Projects Section =============== */
 .projects {
-  background-color: var(--color-bg--body);
+  background: var(--color-bg--body);
   transition: background-color 0.5s;
 }
 
@@ -754,7 +729,7 @@ b {
   background: var(--color-bg-unq);
 
   &:hover {
-    background: none;
+    background-color: #fff;
   }
 }
 
@@ -825,4 +800,17 @@ b {
 .project-link:hover,
 .project-link:hover i {
   color: var(--color-bg-sec);
+}
+
+.contact-section {
+  position: relative;
+  row-gap: 0;
+  grid-template-columns: 300px max-content max-content;
+}
+
+.contact-details {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background: var(--color-bg--body)
 }
