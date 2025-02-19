@@ -52,8 +52,8 @@ svg {
   --color-white: #ffffff;
   --color-bg-sec: #8000ff;
   --color-bg-hover: #9a33ff;
-  --color-nav-menu: hsl(0, 0%, 50%);
-  --color-dark-white: hsl(0, 0%, 30%);
+  --color-nav-menu: hsl(0, 0%, 60%);
+  --color-dark-white: hsl(0, 0%, 20%);
   --color-mobile-nav: rgba(0, 0, 0, 0.75);
   --color-box-shadow: rgba(0, 0, 0, 0.1);
   --color-theme: hsl(0, 0%, 10%);
@@ -323,19 +323,16 @@ b {
   transition: color 0.3s;
 }
 
-/* Dark theme variables */
-body.dark-them {
-  /* --color-bg--body: linear-gradient(135deg, #f6f7ff 0%, #e9eeff 100%); */
-  --color-bg--body: linear-gradient(135deg, hsl(0, 0%, 8%) 0%, hsl(0, 0%, 18%) 100%);
-
+/* Dark them Variables */
+/* body.darkTheme {
+  --color-bg--body: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   --color-bg-unq: linear-gradient(90deg, #e639004d, #e6390000);
-  /* --color-black: #000000; */
-  --color-black: hsl(0, 0%, 95%);
+  --color-black: #ffffff;
+  --color-white: #000000;
   --color-bg-sec: #8000ff;
   --color-bg-hover: #9a33ff;
-  /* --color-nav-menu: hsl(0, 0%, 50%); */
-  --color-nav-menu: hsl(0, 0%, 30%);
-  --color-dark-white: hsl(0, 0%, 30%);
+  --color-nav-menu: hsl(0, 0%, 60%);
+  --color-dark-white: hsl(0, 0%, 20%);
   --color-mobile-nav: rgba(0, 0, 0, 0.75);
   --color-box-shadow: rgba(0, 0, 0, 0.1);
   --color-theme: hsl(0, 0%, 10%);
@@ -343,8 +340,7 @@ body.dark-them {
   --color-contact-box: #f1f4ff;
   --color-scroll-bar:#A6A6A6;
   --color-scroll-bar-thumb: #8C8C8C;
-}
-
+} */
 
 /* ============= Home Section ============ */
 .home {
@@ -1026,7 +1022,7 @@ body.dark-them {
 .curved-arrow-social {
   margin: 0 auto .8rem auto;
   width: 35px;
-  filter: invert(0.7);
+  filter: invert(0.75);
 }
 
 .contact-social-details {
@@ -1102,7 +1098,7 @@ textarea.contact-input:-webkit-autofill {
 }
 
 .footer-copy-right {
-  color: var(--color-dark-white);
+  color: hsl(0, 0%, 50%);
   text-align: center;
   font-size: var(--font-size-small);
 
@@ -1141,14 +1137,7 @@ textarea.contact-input:-webkit-autofill {
   }
 }
 
+/* Class to pop up scrollToTop btn with Js */
 .display-scroll {
   bottom: 3rem;
-}
-
-/* Active Link on scroll: check mobile nav*/
-.active-link {
-  color: var(--color-bg-sec);
-}
-.active-link::after {
-  width: 100%;
 }
