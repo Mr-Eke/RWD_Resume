@@ -92,6 +92,14 @@ body {
   line-height: 1.5rem;
 }
 
+.contact-section,
+.projects-section,
+.home-section,
+.about-section,
+.skills-section {
+  padding-top: 4rem;
+}
+
 b {
   color: var(--color-bg-sec);
   background: var(--color-bg-unq);
@@ -111,7 +119,7 @@ b {
     height: 40px;
     background: linear-gradient(to bottom, #8000ff, #4d6b88, #fff);
     left: -1rem;
-    top: -0.3rem;
+    top: -0.7rem;
   }
 }
 
@@ -132,11 +140,11 @@ b {
 
 .grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .section {
-  padding: 2rem 0 2rem 0;
+  /* padding: 2rem 0 2rem 0; */
 }
 
 /* ============= Navigation: Header & Nav ============ */
@@ -299,7 +307,7 @@ b {
 
 /* ============= Home Section ============ */
 .home {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   background: var(--color-bg--body);
   transition: background-color 0.5s;
 
@@ -536,7 +544,7 @@ b {
 }
 
 /* ==================== Skils Section ================== */
-.services {
+.skills {
   background: var(--color-bg--body);
   transition: background-color 0.5s;
 }
@@ -816,6 +824,11 @@ b {
 }
 
 /* ============= Contact Section =============== */
+.contact {
+  background: var(--color-bg--body);
+  transition: background-color 0.5s;
+}
+
 .contact-section {
   position: relative;
   row-gap: 0;
@@ -826,7 +839,7 @@ b {
   width: 300px;
   height: 345px;
   position: relative;
-  background-color: var(--color-white);
+  background-color: #f1f4ff;
   border-bottom: var(--color-bg-sec) 4px solid;
   padding: 1rem 2rem 3rem;
   z-index: 1000;
@@ -954,7 +967,10 @@ b {
 }
 
 .contact-message {
-  color: var(--color-white)
+  color: var(--color-white);
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
 }
 
 /* ======= Contact: Social handles ======= */
@@ -1019,3 +1035,11 @@ textarea.contact-input:-webkit-autofill {
   background-color: var(--color-black) !important;
 }
 
+/* ============ Footer Section ============ */
+.footer {
+  background-color: var(--color-black);
+}
+
+.footer-section {
+  
+}

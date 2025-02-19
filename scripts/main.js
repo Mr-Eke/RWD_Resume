@@ -45,10 +45,13 @@ const sendEmail = (event) => {
     emailjs.sendForm("service_f0n72lt", "template_4cs1frb", "#contact-form", "eVzV4a0lXyF737Dw4")
         // Show message progress & take it off after 5sec
         .then(() => {
-            contactMessage.textContent = "✅ Your message has been sent!"
-            setTimeout(() => {
-                contactMessage.textContent = ""
-            }, 5000)
+            contactMessage.textContent = "Your message has been sent! ✅"
+            setTimeout(() => { contactMessage.textContent = "" }, 5000)
+
+            contactForm.reset() // Clear Form
+        }, () => {
+            contactMessage.textContent = "❌ Message failed to send!"
         })
+
 }
 contactForm.addEventListener("submit", sendEmail)
