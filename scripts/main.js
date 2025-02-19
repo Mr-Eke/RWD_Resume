@@ -56,7 +56,8 @@ const sendEmail = (event) => {
 }
 contactForm.addEventListener("submit", sendEmail)
 
-/* ========== Display Scroll to top button =========*/
+
+/* ===================== Display Scroll to top button ===========================*/
 const scrollUpBtn = () => {
     const scrollUpBtn = document.getElementById("scroll-up")
     this.scrollY >= 400 ? scrollUpBtn.classList.add("display-scroll")
@@ -64,18 +65,23 @@ const scrollUpBtn = () => {
 }
 window.addEventListener("scroll", scrollUpBtn)
 
-/* ========== Active link: Scroll Sections =========*/
+
+/* ==================== Active link: Scroll Sections ========================*/
 const sections = document.querySelectorAll("section[id]")
 
+// Highlights the active nav link based on scroll position
 const scrollActive = () => {
-    const scrollDown = window.scrollY
+    const scrollDown = window.scrollY  // Current vertical scroll position
 
+    // Loop through each sec to determine if it is in the viewport
     sections.forEach(current => {
         const sectionHeight = current.offsetHeight,
             sectionTop = current.offsetTop - 58,
             sectionId = current.getAttribute("id"),
+            // Select the corresponding nav link
             sectionsClass = document.querySelector('.nav-menu a[href*=' + sectionId + ']')
 
+            // if sec is within viewport, add active class to higlight navlink
         if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
             sectionsClass.classList.add("active-link")
         } else {
@@ -83,4 +89,5 @@ const scrollActive = () => {
         }
     })
 }
+// Add event to trigger scrollActive on page scroll
 window.addEventListener("scroll", scrollActive)
