@@ -953,6 +953,10 @@ b {
   opacity: 1;
 }
 
+.contact-message {
+  color: var(--color-white)
+}
+
 /* ======= Contact: Social handles ======= */
 .contact-socials {
   display: grid;
@@ -988,4 +992,3 @@ b {
   justify-content: center;
   column-gap: .6rem;
 }
-
