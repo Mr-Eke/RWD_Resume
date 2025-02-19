@@ -358,7 +358,7 @@
             <div class="contact-section grid">
                 <div class="contact-details">
                     <h2 class="contact-section-title">Contact Me.</h2>
-                    <p class="contact-description">
+                    <p class="contact-description-1">
                         Feel free to reach out, I read every email and will get back to you as soon as possible!
                     </p>
                     <p class="contact-description-2">
@@ -372,29 +372,31 @@
                     <form action="" class="contact-form" id="contact-form">
                         <div class="contact-group">
                             <div class="contact-box">
-                                <input type="text" name="user-name" class="contact-input" id="name" required
+                                <input type="text" name="user_name" class="contact-input" id="name" required
                                     placeholder="First Name">
                                 <label for="name" class="contact-label">First Name</label>
                             </div>
 
                             <div class="contact-box">
-                                <input type="email" name="user-email" class="contact-input" id="email" required
+                                <input type="email" name="user_email" class="contact-input" id="email" required
                                     placeholder="Email Address">
                                 <label for="email" class="contact-label">Email Address</label>
                             </div>
 
                             <div class="contact-box">
-                                <input type="text" name="user-subject" class="contact-input" id="subject" required
+                                <input type="text" name="user_subject" class="contact-input" id="subject" required
                                     placeholder="Subject">
                                 <label for="subject" class="contact-label">Subject</label>
                             </div>
 
                             <div class="contact-box contact-area">
-                                <textarea name="user-message" id="message" class="contact-input" required
+                                <textarea name="user_message" id="message" class="contact-input" required
                                     placeholder="Message"></textarea>
                                 <label for="message" class="contact-label">Message</label>
                             </div>
                         </div>
+
+                        <p class="contact-message" id="contact-message"></p>
 
                         <button type="submit" class="contact-button button">
                             <i class="ri-send-plane-fill"></i> Send Mesage
@@ -403,25 +405,25 @@
                 </div>
                 <div class="contact-socials">
                     <div class="contact-social">
-                        <img src="./images/curved-arrow.svg" alt="curved arrow" class="curved-arrow">
+                        <img src="./images/curved-arrow.svg" alt="curved arrow" class="curved-arrow-social">
 
                         <div class="contact-social-details">
                             <div>
-                                <p class="contact-description">
+                                <p class="contact-description-social">
                                     No email? No problem!
                                 </p>
-                                <p class="contact-description">
+                                <p class="contact-description-social-2">
                                     I'm just a message away on my socials.</p>
                             </div>
                             <div class="contact-social-links">
-                                <a href="" target="_blank" class="contact-social-link">
+                                <a href="" target="_blank" class="social-link">
                                     <i class="ri-linkedin-box-line"></i>
                                 </a>
-                                <a href="" target="_blank" class="contact-social-link">
+                                <a href="" target="_blank" class="social-link">
                                     <i class="ri-instagram-line"></i>
                                 </a>
-                                <a href="" target="_blank" class="contact-social-link">
-                                    <i class="ri-twitter-x-line"></i>
+                                <a href="" target="_blank" class="social-link">
+                                    <i class="ri-twitter-line"></i>
                                 </a>
                             </div>
                         </div>
@@ -435,6 +437,10 @@
     <!-- Footer -->
     <footer class="footer">
     </footer>
+
+    <!-- EmailJs -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
 
     <script src="./scripts/main.js"></script>
 </body>
