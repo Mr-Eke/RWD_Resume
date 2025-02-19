@@ -364,11 +364,12 @@ b {
 .social-link {
   display: grid;
   place-items: center;
-  padding: 6px;
-  font-size: 1.5rem;
+  padding: 5px 6px;
+  font-size: 1.3rem;
   color: var(--color-white);
   background-color: var(--color-bg-sec);
-  border-radius: 0 10px 0 10px;
+  border-radius: 0 8px 0 8px;
+  transition: background-color 0.3s;
 
   &:hover {
     background-color: var(--color-bg-hover);
@@ -814,6 +815,7 @@ b {
   color: var(--color-bg-sec);
 }
 
+/* ============= Contact Section =============== */
 .contact-section {
   position: relative;
   row-gap: 0;
@@ -837,14 +839,15 @@ b {
   transform: translateY(-3rem);
 }
 
-.contact-description {
-  margin-bottom: 2rem;
+.contact-description-1 {
+  margin-bottom: 1rem;
 }
 .contact-description-2 {
   color: var(--color-dark-white);
   font-size: var(--font-size-small);
 }
 
+/* Entire box for email and message */
 .contact-mail {
   position: relative;
   background-color: var(--color-black);
@@ -879,6 +882,7 @@ b {
   border: none;
 }
 
+/* Email input box stylings */
 .contact-input {
   width: 100%;
   height: 100%;
@@ -941,3 +945,47 @@ b {
   top: -16px;
   opacity: 1;
 }
+
+/*On text input, stick label up */
+.contact-input:focus + .contact-label,
+.contact-input:not(:placeholder-shown).contact-input:not(:focus) + .contact-label {
+  top: -16px;
+  opacity: 1;
+}
+
+/* ======= Contact: Social handles ======= */
+.contact-socials {
+  display: grid;
+  row-gap: 1rem;
+  padding-block: 1rem 2rem;
+  text-align: center;
+  background: var(--color-bg-unq)
+}
+
+.curved-arrow-social {
+  margin: 0 auto .8rem auto;
+  width: 35px;
+  filter: invert(0.7);
+}
+
+.contact-social-details {
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem;
+}
+
+.contact-description-social {
+  color: var(--color-dark-white);
+  font-size: var(--font-size-small);
+}
+.contact-description-social-2 {
+  color: var(--color-black);
+  font-size: var(--font-semi-bold);
+}
+
+.contact-social-links {
+  display: flex;
+  justify-content: center;
+  column-gap: .6rem;
+}
+
