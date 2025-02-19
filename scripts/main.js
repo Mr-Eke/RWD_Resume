@@ -55,3 +55,32 @@ const sendEmail = (event) => {
 
 }
 contactForm.addEventListener("submit", sendEmail)
+
+/* ========== Display Scroll to top button =========*/
+const scrollUpBtn = () => {
+    const scrollUpBtn = document.getElementById("scroll-up")
+    this.scrollY >= 400 ? scrollUpBtn.classList.add("display-scroll")
+        : scrollUpBtn.classList.remove("display-scroll")
+}
+window.addEventListener("scroll", scrollUpBtn)
+
+/* ========== Active link: Scroll Sections =========*/
+const sections = document.querySelectorAll("section[id]")
+
+const scrollActive = () => {
+    const scrollDown = window.scrollY
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight,
+            sectionTop = current.offsetTop - 58,
+            sectionId = current.getAttribute("id"),
+            sectionsClass = document.querySelector('.nav-menu a[href*=' + sectionId + ']')
+
+        if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+            sectionsClass.classList.add("active-link")
+        } else {
+            sectionsClass.classList.remove("active-link")
+        }
+    })
+}
+window.addEventListener("scroll", scrollActive)
