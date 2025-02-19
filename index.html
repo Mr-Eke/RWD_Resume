@@ -24,7 +24,7 @@
 
                 <ul class="nav-list">
                     <li class="nav-items">
-                        <a href="#home" class="navbar-link">Home</a>
+                        <a href="#home" class="navbar-link active-link">Home</a>
                     </li>
                     <li class="nav-items">
                         <a href="#about" class="navbar-link">About</a>
@@ -48,6 +48,9 @@
                 </div>
             </div>
             <div class="nav-button">
+                <!-- Change Theme -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
                 <!-- Toggle: nav button -->
                 <div class="nav-toggle" id="nav-toggle">
                     <i class="ri-menu-line"></i>
@@ -147,7 +150,7 @@
         </section>
 
         <!-- Skills/Services -->
-        <section class="skills section">
+        <section class="skills section" id="skills">
             <div class="skills-section container grid">
                 <h2 class="skills-section-title">
                     My <b>Skills. </b>What I do Best!
@@ -260,7 +263,7 @@
             </div>
         </section>
         <!-- Projects -->
-        <section class="projects section">
+        <section class="projects section" id="projects">
             <div class="projects-section">
                 <h2 class="projects-section-title">Projects.</h2>
                 <div class="projects-container container grid">
@@ -342,12 +345,7 @@
         </section>
 
         <!-- Education -->
-        <section class="services section">
-
-        </section>
-
-        <!-- Projects -->
-        <section class="projects section" id="projects">
+        <section class="education section" id="education">
 
         </section>
 
@@ -461,9 +459,9 @@
     </footer>
 
     <!-- Got to top -->
-     <a href="#" class="scroll-up" id="scroll-up">
+    <a href="#" class="scroll-up" id="scroll-up">
         <i class="ri-arrow-up-double-fill"></i>
-     </a>
+    </a>
 
     <!-- EmailJs -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
