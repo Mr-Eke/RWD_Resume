@@ -1,4 +1,4 @@
-// Display Mobile Menu
+/* =======================  Display Mobile Menu  =====================*/
 const navBarMenu = document.getElementById("nav-menu"),
     navBarClose = document.getElementById("nav-close"),
     navBarToggle = document.getElementById("nav-toggle")
@@ -34,7 +34,9 @@ window.addEventListener('scroll', () => {
         : header.classList.remove("scroll-header")
 });
 
-/* =============== EmailJs API  ============*/
+
+
+/* ====================== EmailJs API Integration =====================*/
 const contactForm = document.getElementById("contact-form"),
     contactMessage = document.getElementById("contact-message")
 
@@ -91,3 +93,31 @@ const scrollActive = () => {
 }
 // Add event to trigger scrollActive on page scroll
 window.addEventListener("scroll", scrollActive)
+
+
+/* =============================== Change Theme (light & dark) ============================= */
+
+const themeButton = document.getElementById("theme-button")
+const darkTheme = "dark-theme"
+const iconTheme = "bx-sun"
+
+const selectedTheme = localStorage.getItem("selected-theme")
+const selectedIcon = localStorage.getItem("selected-icon")
+
+// validate dark-theme and obtain curr theme class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? "dark" : "light"
+const getCurrentIcon = () => themeButton.classList(iconTheme) ? "bx bx-moon" : "bx bx-sun"
+
+if (selectedTheme) {
+    document.body.classList[selectedTheme == "dark" ? "add" : "remove"](darkTheme)
+    themeButton.classList[selectedIcon == "bx bx-moon" ? "add" : "remove"](iconTheme)
+}
+
+themeButton.addEventListener("click", () => {
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+
+    localStorage.setItem("selected-theme", getCurrentTheme())
+    localStorage.setItem("selectedIcon", getCurrentIcon())
+})
+
