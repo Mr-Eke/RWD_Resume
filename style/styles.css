@@ -237,9 +237,9 @@ body {
 
 /* nav behaviour When contents scroll past navbar */
 .scroll-header {
-    background-color: var(--card-bg);
-    box-shadow: rgba(0, 0, 0, 0.15) 0 0.4rem 0 -0.25rem;
-  }
+  background-color: var(--card-bg);
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0.4rem 0 -0.25rem;
+}
 
 /* ========= Hero Section ========== */
 .hero {
@@ -456,4 +456,71 @@ body {
   font-weight: 600;
   color: #3498db;
   margin-bottom: 0.5em;
+}
+
+/* Projects Section */
+#projects {
+  padding: 5em 0;
+  background-color: #f9f9f9;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+  padding: 1rem 1rem 0 1rem;
+
+  .project-img {
+    width: 98%;
+    height: 250px;
+    object-fit: cover;
+    /* border: 1px solid var(--primary-color); */
+    border-radius: 0 16px 0 16px;
+  }
+}
+
+.project-content {
+  padding: 1.5em;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.project-tag {
+  background-color: #ecf0f1;
+  color: #7f8c8d;
+  padding: 0.3em 0.8em;
+  border-radius: 3px;
+  font-size: 0.85em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.project-links {
+  margin-top: 1em;
+}
+
+.project-links a {
+  margin-right: 1em;
+  font-weight: 500;
 }
