@@ -13,7 +13,7 @@
 /* Reuseable Variables */
 :root {
   --bg-color: #f9f9f9;
-  --text-color: #333;
+  --text-color: #1d2c3c;;
   --header-bg: #fff;
   --border-color: #eee;
   --primary-color: #3498db;
@@ -65,7 +65,7 @@ body {
 }
 
 .nav-links a {
-  color: #1d2c3c;
+  color: var(--text-color);
   font-size: 1.2rem;
   font-weight: 700;
   display: block;
@@ -73,7 +73,7 @@ body {
 }
 
 .nav-links li:last-child {
-  border: 2px solid #646e7a;
+  border: 2px solid var(--primary-color);
   border-radius: 4px;
   width: fit-content;
   padding: 0 0.8rem;
@@ -106,3 +106,20 @@ body {
 .menu-icon span:nth-child(3) {
   top: 16px;
 }
+
+/* Change/rotate to an X icon when clicked */
+.menu-icon.active {
+  span:first-child {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  span:nth-child(2) {
+    opacity: 0;
+  }
+
+  span:last-child {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}
+
+
