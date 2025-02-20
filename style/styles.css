@@ -524,3 +524,31 @@ body {
   margin-right: 1em;
   font-weight: 500;
 }
+
+/* Education Section */
+#education {
+  padding: 5em 0;
+  background-color: #fff;
+}
+
+.container h2 {
+  margin-bottom: 1em;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 1rem;
+}
+
+.education-item {
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.education-item:last-child {
+  border-bottom: none;
+}
+
+.education-date {
+  font-weight: 600;
+  color: #3498db;
+  margin-bottom: 0.5em;
+}
