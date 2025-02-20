@@ -1,3 +1,4 @@
+// Mobile nav menu interactiveness: Toggle open and close
 document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.querySelector('.menu-icon');
     const navList = document.querySelector('.nav-links');
@@ -19,7 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Changes the header appearance when theres a vertical scroll above 49px
+
+// Changes the header appearance when theres a vertical scroll above 150px
+// To let the website contents scroll behind the pinned nav
 window.addEventListener('scroll', () => {
     const header = document.getElementById('header');
     window.scrollY > 150 ? header.classList.add("scroll-header")
@@ -27,7 +30,7 @@ window.addEventListener('scroll', () => {
 });
 
 
-/* ====================== EmailJs API Integration =====================*/
+/* ============ EmailJs API Integration (Cntact Message Functionality) ==============*/
 const contactForm = document.getElementById("contact-form"),
     contactMessage = document.getElementById("contact-message")
 
@@ -40,11 +43,9 @@ const sendEmail = (event) => {
         .then(() => {
             contactMessage.textContent = "Your message has been sent! ✅"
             setTimeout(() => { contactMessage.textContent = "" }, 5000)
-
             contactForm.reset() // Clear Form
         }, () => {
             contactMessage.textContent = "❌ Message failed to send!"
         })
-
 }
 contactForm.addEventListener("submit", sendEmail)
