@@ -321,7 +321,7 @@ body {
 .skill-item li {
   position: relative;
   padding-left: 1.7rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 
   &:before {
     font-size: clamp(0.6rem, 4vw, 0.87rem);
@@ -353,14 +353,15 @@ body {
 }
 
 .experience-company {
-    font-weight: 600;
-    margin-bottom: 0.1em;
+  font-weight: 600;
+  margin-bottom: 0.1em;
 }
 
 .timeline {
   position: relative;
   max-width: 1200px;
-  margin: 2em auto;
+  margin: 0 auto;
+  counter-reset: timeline-counter; /* Initialize the counter */
 }
 
 .timeline::after {
@@ -379,6 +380,7 @@ body {
   position: relative;
   width: 50%;
   box-sizing: border-box;
+  counter-increment: timeline-counter; /* Increment the counter for each item */
 }
 
 .timeline-item:nth-child(odd) {
@@ -397,21 +399,52 @@ body {
 }
 
 .timeline-item::after {
-  content: "";
+  content: counter(timeline-counter); /* Use the counter value */
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   background-color: var(--card-bg);
-  border: 4px solid #3498db;
+  border: 2px solid #3498db;
   border-radius: 50%;
   top: 15px;
   right: -12px;
   z-index: 1;
+  /* Center the number in the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
 
 .timeline-item:nth-child(even)::after {
   right: auto;
   left: -12px;
+}
+
+/* mobile responsiveness for experience line styling */
+@media (max-width: 1024px) {
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+
+  .timeline-item::after {
+    left: 19px;
+    right: auto;
+  }
+
+  .timeline-item:nth-child(even)::after {
+    left: 19px;
+  }
 }
 
 .timeline-date {
