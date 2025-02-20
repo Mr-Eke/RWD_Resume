@@ -29,7 +29,16 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
+  line-height: 1.5rem;
 }
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
 
 /* =============== Navigation: Logo & Nav Links ============== */
 .navbar {
@@ -41,7 +50,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
-  background-color: #f5f8fa;
+  /* background-color: #f5f8fa; */
   /* box-shadow: rgba(0, 0, 0, 0.15) 0 0.4rem 0 -0.25rem; */
   z-index: 1000;
   height: 60px;
@@ -222,3 +231,16 @@ body {
     padding: 0.8rem 8rem;
   }
 }
+
+/* ========= Hero Section ========== */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding-top: 5rem;
+  }
+
+  .hero-content {
+    max-width: 800px;
+  }
