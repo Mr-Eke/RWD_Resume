@@ -18,3 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Changes the header appearance when theres a vertical scroll above 49px
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    window.scrollY > 150 ? header.classList.add("scroll-header")
+        : header.classList.remove("scroll-header")
+});
