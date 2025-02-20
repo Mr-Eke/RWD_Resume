@@ -39,6 +39,7 @@ body {
 }
 
 /* =============== Navigation: Logo & Nav Links ============== */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -47,9 +48,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
-  /* background-color: #f5f8fa; */
-  /* box-shadow: rgba(0, 0, 0, 0.15) 0 0.4rem 0 -0.25rem; */
+  padding: clamp(1rem, 2vw, 1.5rem) clamp(1rem, 4vw, 2rem);
   z-index: 1000;
   height: 60px;
 }
@@ -80,13 +79,13 @@ body {
   left: 0;
   width: 100%;
   height: calc(100vh - 60px);
-  background-color: #f5f8fa;
-  padding: clamp(1rem, 4vw, 2rem);
+  padding: 2rem;
   z-index: 999;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  background-color: var(--bg-color);
 }
 
 /* Show Nav-menus on click */
@@ -235,6 +234,12 @@ body {
     padding: 0.8rem 8rem;
   }
 }
+
+/* nav behaviour When contents scroll past navbar */
+.scroll-header {
+    background-color: var(--card-bg);
+    box-shadow: rgba(0, 0, 0, 0.15) 0 0.4rem 0 -0.25rem;
+  }
 
 /* ========= Hero Section ========== */
 .hero {
