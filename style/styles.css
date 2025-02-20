@@ -242,5 +242,71 @@ body {
   }
 
   .hero-content {
-    max-width: 800px;
+    max-width: 750px;
+
+    h1, p {
+        margin-bottom: 1.5rem;
+    }
   }
+
+  .cta-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+
+  /* Skills Section */
+  #skills {
+    padding: 5em 0;
+    background-color: #f9f9f9;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.skill-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1.5em;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.skill-card h3 {
+    color: #3498db;
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+}
+
+.skill-level {
+    height: 8px;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    margin-top: 1em;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 4px;
+}
