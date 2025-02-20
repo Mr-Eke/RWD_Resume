@@ -276,22 +276,24 @@ body {
 }
 
 .skill-title {
-    margin-bottom: .5em;
-    padding-bottom: .5em;
-    border-bottom: 2px solid var(--primary-color);
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1em;
   margin-top: 2em;
 }
 
 .skill-card {
   background-color: var(--card-bg);
   border-radius: 0 32px 0 32px;
-  padding: 1.5em;
+  padding: 3rem 1.3rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -315,84 +317,105 @@ body {
   overflow: hidden;
 }
 
+/* Circle-check bullent points */
+.skill-item li {
+  position: relative;
+  padding-left: 1.7rem;
+  margin-bottom: .5rem;
+
+  &:before {
+    font-size: clamp(0.6rem, 4vw, 0.87rem);
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 12%;
+    background: url("../images/check-circle.svg") no-repeat;
+  }
+}
 .skill-progress {
   height: 100%;
   background-color: #3498db;
   border-radius: 4px;
 }
 
-
- /* =============== Experience Section ============ */
- #experience {
-    padding: 2em 0;
-    background-color: var(--card-bg);
+/* =============== Experience Section ============ */
+#experience {
+  padding: 2em 0;
+  background-color: var(--card-bg);
 }
 
 .experience-title {
-    margin-bottom: 1em;
-    padding-bottom: 1em;
-    border-bottom: 2px solid var(--primary-color);
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.experience-company {
+    font-weight: 600;
+    margin-bottom: 0.1em;
 }
 
 .timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 2em auto;
+  position: relative;
+  max-width: 1200px;
+  margin: 2em auto;
 }
 
 .timeline::after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background-color: #3498db;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -2px;
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: #3498db;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
 }
 
 .timeline-item {
-    padding: 10px 40px;
-    position: relative;
-    width: 50%;
-    box-sizing: border-box;
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
 }
 
 .timeline-item:nth-child(odd) {
-    left: 0;
+  left: 0;
 }
 
 .timeline-item:nth-child(even) {
-    left: 50%;
+  left: 50%;
 }
 
 .timeline-content {
-    padding: 20px;
-    background-color: var(--card-bg);
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .timeline-item::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: var(--card-bg);
-    border: 4px solid #3498db;
-    border-radius: 50%;
-    top: 15px;
-    right: -12px;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--card-bg);
+  border: 4px solid #3498db;
+  border-radius: 50%;
+  top: 15px;
+  right: -12px;
+  z-index: 1;
 }
 
 .timeline-item:nth-child(even)::after {
-    right: auto;
-    left: -12px;
+  right: auto;
+  left: -12px;
 }
 
 .timeline-date {
-    font-weight: 600;
-    color: #3498db;
-    margin-bottom: 0.5em;
+  font-weight: 600;
+  color: #3498db;
+  margin-bottom: 0.5em;
 }
