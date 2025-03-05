@@ -40,7 +40,7 @@
 
     <!-- Hero Section -->
     <section class="hero" id="about">
-        <div class="container">
+        <div class="hero-container container">
             <div class="hero-content">
                 <h1>Hi, I'm Chiagoziem Eke</h1>
                 <p>
@@ -52,47 +52,50 @@
             </div>
         </div>
 
-        <!-- Carousel of skillss -->
+        <!-- Carousel of skills (Infinite slider) -->
         <div class="skills-carousel">
-            <ul class="skills-list">
-                <li class="skill-item">Python</li>
-                <li class="skill-item">Flask</li>
-                <li class="skill-item">SQL</li>
-                <li class="skill-item">SQlAchemy</li>
-                <li class="skill-item">JavaScript</li>
-                <li class="skill-item">React Js</li>
-                <li class="skill-item">HTML</li>
-                <li class="skill-item">CSS</li>
-                <li class="skill-item">TailwindCss</li>
-                <li class="skill-item">Node Js</li>
-                <li class="skill-item">Bash Scripting</li>
-                <li class="skill-item">Linux/Unix</li>
-                <li class="skill-item">C Programming</li>
-                <li class="skill-item">Vs Code</li>
-                <li class="skill-item">Vim</li>
-                <li class="skill-item">Trello Board</li>
-                <li class="skill-item">Git & Github</li>
-
-                <!-- Duplicate list for seamless infinite scroll -->
-                <li class="skill-item">Python</li>
-                <li class="skill-item">Flask</li>
-                <li class="skill-item">SQL</li>
-                <li class="skill-item">SQlAchemy</li>
-                <li class="skill-item">JavaScript</li>
-                <li class="skill-item">React Js</li>
-                <li class="skill-item">HTML</li>
-                <li class="skill-item">CSS</li>
-                <li class="skill-item">TailwindCss</li>
-                <li class="skill-item">Node Js</li>
-                <li class="skill-item">Bash Scripting</li>
-                <li class="skill-item">Linux/Unix</li>
-                <li class="skill-item">C Programming</li>
-                <li class="skill-item">Vs Code</li>
-                <li class="skill-item">Vim</li>
-                <li class="skill-item">Trello Board</li>
-                <li class="skill-item">Git & Github</li>
-            </ul>
-        </div>
+            <div class="skills-wrapper">
+              <div class="skills-item">
+                <div class="skill-logo"><img src="./images/javascript.png" alt="">JavaScript</div>
+                <div class="skill-logo"><img src="./images/react.png" alt="">React JS</div>
+                <div class="skill-logo"><img src="./images/python.png" alt="">Python</div>
+                <div class="skill-logo"><img src="./images/flask-py.png" alt="">Flask</div>
+                <div class="skill-logo"><img src="./images/sql.png" alt="">SQL</div>
+                <div class="skill-logo"><img src="./images/sqlachemy.png" alt="">SQLAlchemy</div>
+                <div class="skill-logo"><img src="./images/html.png" alt="">HTML</div>
+                <div class="skill-logo"><img src="./images/css.png" alt="">CSS</div>
+                <div class="skill-logo"><img src="./images/tailwind.png" alt="">TailwindCss</div>
+                <div class="skill-logo"><img src="./images/node.png" alt="">Node JS</div>
+                <div class="skill-logo"><img src="./images/bash.png" alt="">Bash Scripting</div>
+                <div class="skill-logo"><img src="./images/linux.png" alt="">Linux/Unix</div>
+                <div class="skill-logo"><img src="./images/c.png" alt="">C Programming</div>
+                <div class="skill-logo"><img src="./images/vscode.png" alt="">VS Code</div>
+                <div class="skill-logo"><img src="./images/trello.png" alt="">Trello Board</div>
+                <div class="skill-logo"><img src="./images/vim.png" alt="">Vim</div>
+                <div class="skill-logo"><img src="./images/git.png" alt="">Git & Github</div>
+              </div>
+              <!-- Duplicate items for infinite scroll -->
+              <div class="skills-item">
+                <div class="skill-logo"><img src="./images/javascript.png" alt="">JavaScript</div>
+                <div class="skill-logo"><img src="./images/react.png" alt="">React JS</div>
+                <div class="skill-logo"><img src="./images/python.png" alt="">Python</div>
+                <div class="skill-logo"><img src="./images/flask-py.png" alt="">Flask</div>
+                <div class="skill-logo"><img src="./images/sql.png" alt="">SQL</div>
+                <div class="skill-logo"><img src="./images/sqlachemy.png" alt="">SQLAlchemy</div>
+                <div class="skill-logo"><img src="./images/html.png" alt="">HTML</div>
+                <div class="skill-logo"><img src="./images/css.png" alt="">CSS</div>
+                <div class="skill-logo"><img src="./images/tailwind.png" alt="">TailwindCss</div>
+                <div class="skill-logo"><img src="./images/node.png" alt="">Node JS</div>
+                <div class="skill-logo"><img src="./images/bash.png" alt="">Bash Scripting</div>
+                <div class="skill-logo"><img src="./images/linux.png" alt="">Linux/Unix</div>
+                <div class="skill-logo"><img src="./images/c.png" alt="">C Programming</div>
+                <div class="skill-logo"><img src="./images/vscode.png" alt="">VS Code</div>
+                <div class="skill-logo"><img src="./images/trello.png" alt="">Trello Board</div>
+                <div class="skill-logo"><img src="./images/vim.png" alt="">Vim</div>
+                <div class="skill-logo"><img src="./images/git.png" alt="">Git & Github</div>
+              </div>
+            </div>
+          </div>
     </section>
 
     <!-- Skills Section -->
@@ -280,19 +283,23 @@
                     <form id="contact-form">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="user_name" class="form-control" placeholder="Your name" required>
+                            <input type="text" id="name" name="user_name" class="form-control" placeholder="Your name"
+                                required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="user_email" class="form-control" placeholder="your@email.com" required>
+                            <input type="email" id="email" name="user_email" class="form-control"
+                                placeholder="your@email.com" required>
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-control" placeholder="What's this about?" required>
+                            <input type="text" id="subject" name="subject" class="form-control"
+                                placeholder="What's this about?" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Your message here..." required></textarea>
+                            <textarea id="message" name="message" class="form-control" rows="5"
+                                placeholder="Your message here..." required></textarea>
                         </div>
 
                         <!-- Message display element for EmailJS feedback -->
@@ -322,8 +329,8 @@
         </div>
     </section>
 
-     <!-- Footer -->
-     <footer>
+    <!-- Footer -->
+    <footer>
         <div class="container">
             <p>© 2025 Chiagoziem Eke. All rights reserved.</p>
             <div class="social-links">
