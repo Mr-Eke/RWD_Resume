@@ -245,7 +245,7 @@ body {
 /* ========= Hero Section ========== */
 .hero {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   place-items: center;
@@ -279,7 +279,7 @@ body {
 }
 
 .hero-container {
-  flex: 0 0 80vh;
+  /* flex: 0 0 80vh; */
 }
 
 /* ========== Infinite carousel(slider): Skills =========*/
@@ -290,7 +290,7 @@ body {
   position: absolute;
   bottom: 0;
   background-color: var(--color-white);
-  height: 20vh;
+  /* height: 20vh; */
 }
 
 .skills-wrapper {
