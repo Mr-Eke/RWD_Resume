@@ -244,6 +244,7 @@ body {
 
 /* ========= Hero Section ========== */
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -286,7 +287,8 @@ body {
   max-width: 100%;
   width: 100%;
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  bottom: 0;
   background-color: var(--color-white);
   height: 20vh;
 }
