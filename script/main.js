@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // To let the website contents scroll behind the pinned nav
 window.addEventListener('scroll', () => {
     const header = document.getElementById('header');
-    window.scrollY > 150 ? header.classList.add("scroll-header")
+    window.scrollY > 50 ? header.classList.add("scroll-header")
         : header.classList.remove("scroll-header")
 });
 
