@@ -267,7 +267,7 @@ body {
 
   p {
     margin-bottom: 2rem;
-    font-size: clamp(.9rem, 4vw, 1.2rem);
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
     line-height: 1.5;
   }
 }
@@ -479,7 +479,7 @@ body {
   margin-bottom: 0.5em;
 }
 
-/* Projects Section */
+/* =============== Projects Section ============ */
 #projects {
   padding: 5em 0;
   background-color: #f9f9f9;
@@ -509,8 +509,7 @@ body {
   padding: 1rem 1rem 0 1rem;
 
   .project-img {
-    width: 98%;
-    height: 250px;
+    max-width: 100%;
     object-fit: cover;
     border-radius: 0 16px 0 16px;
   }
@@ -552,7 +551,7 @@ body {
   }
 }
 
-/* Education Section */
+/* ================== Education Section ================= */
 #education {
   padding: 5em 0;
   background-color: #fff;
