@@ -293,7 +293,7 @@ body {
 
 .skills-wrapper {
   display: flex;
-  animation: scroll 20s linear infinite;
+  animation: scroll 10s linear infinite;
   gap: 3rem;
 }
 
@@ -322,10 +322,11 @@ body {
   place-items: center;
   color: var(--hero-bg-color);
   white-space: nowrap;
+  font-size: .8rem;
 }
 
 .skills-item img {
-  height: 25px;
+  height: 20px;
   margin-bottom: 0.3rem;
 }
 
