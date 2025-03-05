@@ -245,7 +245,8 @@ body {
 /* ========= Hero Section ========== */
 .hero {
   height: 100vh;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   place-items: center;
   background: var(--hero-bg-color);
   padding-top: 12rem;
@@ -254,9 +255,11 @@ body {
 .hero-content {
   max-width: 750px;
 
-  h1,
+  h1 {
+    margin-bottom: 0.7rem;
+  }
   p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -264,63 +267,66 @@ body {
   display: inline-block;
   background-color: var(--primary-color);
   color: var(--color-white);
-  padding: 0.8em 1.5em;
+  padding: 0.6em 1.5em;
   border-radius: 5px;
   font-weight: 500;
-  transition: background-color 0.3s;
+  transition: opacity 0.2s;
 }
 
 .cta-button:hover {
-  background-color: #2980b9;
-  color: var(--color-white);
+ opacity: 0.75;
 }
 
-/* ========== Infinite carousel: Skills =========*/
+.hero-container {
+  flex: 0 0 60vh;
+}
+
+/* ========== Infinite carousel(slider): Skills =========*/
 .skills-carousel {
   max-width: 100%;
-  overflow: hidden;
   width: 100%;
+  overflow: hidden;
   position: relative;
+  background-color: var(--color-white);
+  height: 40vh;
 }
 
-.skills-list {
+.skills-wrapper {
   display: flex;
-  width: max-content;
   animation: scroll 20s linear infinite;
   gap: 3rem;
-  padding: 1rem 0;
-
-  .skill-item {
-    font-size: .8rem;
-  }
 }
 
-.skills-list:hover {
+.skills-wrapper:hover {
   animation-play-state: paused;
+}
+
+.skills-item {
+  display: flex;
+  gap: 3rem;
+  flex-shrink: 0; /* Prevents items from shrinking */
+  padding: 1rem 0;
 }
 
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
-  100% { 
+  100% {
     transform: translateX(-50%);
   }
 }
 
-.skill-item {
-  flex-shrink: 0;
-  background-color: var(--hero-bg-color);
-  padding: 0.6rem 1rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  font-weight: 600;
-  list-style: square;
+.skill-logo {
+  display: grid;
+  place-items: center;
+  color: var(--hero-bg-color);
   white-space: nowrap;
-  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.skill-item:hover {
-  transform: scale(1.08);
+.skills-item img {
+  height: 25px;
+  margin-bottom: 0.3rem;
 }
 
 /* ============== Skills Section ========== */
