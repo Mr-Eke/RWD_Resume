@@ -543,6 +543,13 @@ body {
 .project-links a {
   margin-right: 1em;
   font-weight: 500;
+  color: var(--primary-color);
+  padding-bottom: 1rem;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 /* Education Section */
